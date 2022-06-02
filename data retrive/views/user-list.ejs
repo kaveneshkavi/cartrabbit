@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>.Database</title>
+</head>
+<body>
+    <div class="table-data">
+<center><h2 style="background-color:rgb(59, 233, 189) ;">Customer Booking Details</h2></center>
+    <table border="1">
+        <tr>
+           
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Email</th>
+            <th>Check In Date</th>
+            <th>Check Out Date</th>
+            <th>Room</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+           
+            <td><%=data.name %></td>
+            <td><%=data.address %></td>
+            <td><%=data.city %></td>
+            <td><%=data.state %></td>
+            <td><%=data.zip %></td>
+            <td><%=data.email %></td>
+            <td><%=data.checkindate %></td>
+            <td><%=data.checkoutdate %></td>
+            <td><%=data.room %></td>
+            <td><a href="/users/edit/<%=data.id%>">Edit</a></td>
+            <td><a href="/users/delete/<%=data.id%>">Delete</a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
