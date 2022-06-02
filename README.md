@@ -37,7 +37,7 @@ Getting Started:
     -Install node.js
     -Install XAMMP
     -Install Dependencies refer Package.json
-    -Import the Database from the models folder 
+    -Import the Database from "guest.sql" set Database name as "mydb"(Prefered)
 
 To Run :
 
