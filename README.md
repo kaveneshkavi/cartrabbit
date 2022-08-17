@@ -30,7 +30,7 @@ Database:
 Applications:
   -Xampp
   -Any Browser(Chrome Recommended)
-  -Code Editor
+  -VSCode Editor
 
 Getting Started: 
     -Download Project
